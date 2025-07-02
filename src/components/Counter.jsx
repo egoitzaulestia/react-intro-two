@@ -1,18 +1,19 @@
 import { useState, useEffect } from "react";
 
-const Counter = () => {
-  const [counter, setCounter] = useState(0);
+const Counter = ({ start = 0, step = 1 }) => {
+  // We initialize from `start` prop
+  const [counter, setCounter] = useState(start);
 
   useEffect(() => {
     console.log("mounted");
-  }, []);
+  }, [start]);
 
   const increment = () => {
-    setCounter(counter + 1);
+    setCounter((prev) => prev + step);
   };
 
   const decrement = () => {
-    setCounter(counter - 1);
+    setCounter((prev) => prev - step);
   };
 
   return (
