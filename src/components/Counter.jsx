@@ -11,11 +11,15 @@ const Counter = () => {
     setCounter(counter + 1);
   };
 
+  const decrement = () => {
+    setCounter(counter - 1);
+  };
+
   return (
     <div>
       <button onClick={increment}>+</button>
       <h3>{counter}</h3>
-      <button onClick={() => setCounter((counter) => counter - 1)}>-</button>
+      <button onClick={decrement}>-</button>
     </div>
   );
 };
