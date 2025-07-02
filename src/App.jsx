@@ -1,5 +1,6 @@
 import "./App.css";
 import Counter from "./components/Counter/Counter";
+import Greeting from "./components/Greeting/Greeting";
 
 function App() {
   return (
@@ -9,6 +10,11 @@ function App() {
 
       {/* Starts at 5, steps of 5 */}
       <Counter start={5} step={5} />
+      <br />
+      <hr />
+      <br />
+
+      <Greeting name={"Neo"} />
     </>
   );
 }

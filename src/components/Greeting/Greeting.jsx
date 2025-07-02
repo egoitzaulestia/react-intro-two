@@ -1,7 +1,14 @@
-// import { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 const Greeting = ({ name }) => {
-  return <p>Wake up, {name}...</p>;
+  const [greeting, setGreeting] = useState(`Wake up, ${name}...`);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setGreeting("The Matrix has you...");
+    }, 3000);
+  });
+  return <p> {greeting}</p>;
 };
 
 export default Greeting;
