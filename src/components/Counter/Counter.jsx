@@ -19,9 +19,9 @@ const Counter = ({ start = 0, step = 1 }) => {
 
   return (
     <div className="counter">
-      <button onClick={increment}>+</button>
-      <h3>{counter}</h3>
       <button onClick={decrement}>-</button>
+      <h3>{counter}</h3>
+      <button onClick={increment}>+</button>
     </div>
   );
 };
