@@ -7,9 +7,13 @@ const Counter = () => {
     console.log("mounted");
   }, []);
 
+  const increment = () => {
+    setCounter(counter + 1);
+  };
+
   return (
     <div>
-      <button onClick={() => setCounter((counter) => counter + 1)}>+</button>
+      <button onClick={increment}>+</button>
       <h3>{counter}</h3>
       <button onClick={() => setCounter((counter) => counter - 1)}>-</button>
     </div>
