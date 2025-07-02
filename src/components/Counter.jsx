@@ -10,7 +10,8 @@ const Counter = () => {
   return (
     <div>
       <button onClick={() => setCounter((counter) => counter + 1)}>+</button>
-      <p>{counter}</p>
+      <h3>{counter}</h3>
+      <button onClick={() => setCounter((counter) => counter - 1)}>-</button>
     </div>
   );
 };
