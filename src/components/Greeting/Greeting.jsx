@@ -8,7 +8,7 @@ const Greeting = ({ name }) => {
       setGreeting("The Matrix has you...");
     }, 3000);
   });
-  return <p> {greeting}</p>;
+  return <p>{greeting}</p>;
 };
 
 export default Greeting;
